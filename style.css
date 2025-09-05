@@ -1,18 +1,18 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
   margin: 0;
 }
 
 header {
-  background: #0077cc;
-  color: white;
+  background: #1e3a8a; /* Deep Navy Blue */
+  color: #ffffff;
   padding: 1px;
   text-align: center;
 }
 
-header p{
+header p {
   font-size: 0.9em;
-  color: #e0e0e0;  
+  color: #cbd5e1; /* Light slate blue */
 }
 
 .container {
@@ -22,15 +22,16 @@ header p{
 
 .sidebar {
   width: 20%;
-  background: #f4f4f4;
+  background: #f0f9ff; /* Very light blue */
   padding: 15px;
   box-sizing: border-box;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #3b82f6; /* Medium blue border */
   overflow-y: auto;
 }
 
 .sidebar h3 {
   margin-top: 0;
+  color: #1d4ed8; /* Strong blue heading */
 }
 
 .sidebar ul {
@@ -45,22 +46,26 @@ header p{
 .sidebar li ul {
   margin-left: 15px;
   padding-left: 0px;
-  border-left: 2px solid #ddd;
+  border-left: 2px solid #93c5fd; /* Soft sky-blue border */
 }
 
 .sidebar a {
   text-decoration: none;
-  color: #0077cc;
+  color: #2563eb; /* Bright blue links */
+  font-weight: 500;
 }
 
 .sidebar a:hover {
   text-decoration: underline;
+  color: #1e40af; /* Darker blue on hover */
 }
 
 .content {
   width: 80%;
   padding: 15px;
   box-sizing: border-box;
+  background: #ffffff;
+  color: #1e293b; /* Neutral slate for readability */
 }
 
 iframe {
@@ -70,16 +75,16 @@ iframe {
 }
 
 .custom-link {
-    text-decoration: none; /* Removes underline */
-    color: #ffffff; /* Set your desired color (e.g., blue) */
+    text-decoration: none;
+    color: #ffffff; /* White links for header */
 }
 
 .custom-link:visited {
-    color: #ffffff; /* Same color for visited links */
+    color: #ffffff;
 }
 
 .custom-link:hover,
 .custom-link:active {
-    color: #06559e; /* Same color for hover and active states */
-    text-decoration: none; /* Ensure no underline on hover */
+    color: #60a5fa; /* Sky blue highlight */
+    text-decoration: none;
 }
