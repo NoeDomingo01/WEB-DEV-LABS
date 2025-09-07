@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Styling</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }        
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            margin: 20px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .box1 {
+            background-color: #3498db; /* Blue */
+            border: 5px solid #00080e;
+        }
+        .box2 {
+            background-color: #e74c3c; /* Red */
+            border: 5px dashed #160101;
+        }
+        .box3 {
+            background-color: #2ecc71; /* Green */
+            border: 5px double #011308;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background & Border Styling</h1>
+    <div class="container">
+        <div class="box box1">
+            <h3>Box 1</h3>
+            <p>Solid Border</p>
+        </div>
+        <div class="box box2">
+            <h3>Box 2</h3>
+            <p>Dashed Border</p>
+        </div>
+        <div class="box box3">
+            <h3>Box 3</h3>
+            <p>Double Border</p>
+        </div>
+    </div>
+</body>
+</html>
