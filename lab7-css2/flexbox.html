@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flexbox Layout</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center; /* justified */
+      gap: 20px; /* spacing between boxes */
+      margin-top: 50px;
+    }
+
+     .box {
+      width: 100px;
+      height: 100px;
+      background-color: #ff9800; /* Changed to orange for visibility */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff; /* Changed to white for contrast */
+      font-weight: bold;
+      font-size: 1.2em; /* Increased font size */
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">First</div>
+    <div class="box">Second</div>
+    <div class="box">Third</div>
+  </div>
+</body>
+</html>

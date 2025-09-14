@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Profile Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f9;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around; /* spaces cards evenly */
+      gap: 20px; /* spacing between cards */
+    }
+
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Profile Cards</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://pin.it/5dzQlsgbx.image.jpg" alt="Profile 1">
+      <h3>Gojo Satoru</h3>
+      <p>A strongest jujutsu sorcerer that was cut in half.</p>
+    </div>
+
+    <div class="card">
+      <img src="Precy2.jpg" alt="Profile 2">
+      <h3>Makima</h3>
+      <p>The <b>main antagonist</b> of the Public Safety Saga. She was the Chief Cabinet Secretary's Personal Devil Hunter who took Denji in as her human pet.</p>
+    </div>
+
+    <div class="card">
+      <img src="precy.jpg" alt="Profile 3">
+      <h3>Yoru</h3>
+      <p>One of the <b>Four Horsemen</b> and currently occupies the body of asa Mitaka as a Fiend</p>
+    </div>
+  </div>
+</body>
+</html>
