@@ -3,28 +3,71 @@
 <head>
   <title>Flexbox Layout</title>
   <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #f4f4f9 60%, #e0e7ff 100%);
+    }
+
+    h1 {
+      text-align: center;
+      color: #3b3b5c;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px #e0e7ff;
+    }
+
     .container {
       display: flex;
-      justify-content: center; /* justified */
-      gap: 20px; /* spacing between boxes */
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
       margin-top: 50px;
     }
 
-     .box {
-      width: 100px;
-      height: 100px;
-      background-color: #ff9800; /* Changed to orange for visibility */
+    .box {
+      background: #fff;
+      padding: 22px 18px;
+      border-radius: 18px;
+      border: none;
+      width: 130px;
+      height: 130px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(60,60,100,0.10);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff; /* Changed to white for contrast */
+      color: #3b3b5c;
       font-weight: bold;
-      font-size: 1.2em; /* Increased font size */
-      border-radius: 8px;
+      font-size: 1.2em;
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #a5b4fc 60%, #818cf8 100%);
+      opacity: 0.13;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .box:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(60,60,100,0.18);
+      border: 2px solid #a5b4fc;
     }
   </style>
-</head>
+<!-- ...existing code... -->
 <body>
+  <h1>Flexbox Boxes</h1>
   <div class="container">
     <div class="box">First</div>
     <div class="box">Second</div>
