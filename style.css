@@ -1,58 +1,37 @@
-/* Global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, 'Lucida Console', monospace;
   margin: 0;
-  background: #121212; /* Dark background */
-  color: #f5f5f5;
 }
 
-/* Header */
 header {
-  background: #1a1a1a; /* Dark header */
-  color: #e63946;      /* Esports Red */
-  padding: 10px;
+  background: #1e3a8a; /* Deep Navy Blue */
+  color: #ffffff;
+  padding: 1px;
   text-align: center;
-  border-bottom: 3px solid #e63946;
 }
 
 header p {
   font-size: 0.9em;
-  color: #bbb;
+  color: #cbd5e1; /* Light slate blue */
 }
 
-.custom-link {
-  text-decoration: none;
-  color: #e63946;
-}
-.custom-link:hover {
-  color: #ff4d6d; /* brighter red */
-}
-
-/* Container layout */
 .container {
   display: flex;
   height: 90vh;
 }
 
-/* Sidebar */
 .sidebar {
   width: 20%;
-  background: #1e1e1e; /* Dark panel */
+  background: #f0f9ff; /* Very light blue */
   padding: 15px;
   box-sizing: border-box;
-  border-right: 2px solid #e63946; /* Red accent */
+  border-right: 1px solid #3b82f6; /* Medium blue border */
   overflow-y: auto;
 }
 
 .sidebar h3 {
   margin-top: 0;
-  color: #e63946;
+  color: #1d4ed8; /* Strong blue heading */
 }
 
 .sidebar ul {
@@ -67,27 +46,26 @@ header p {
 .sidebar li ul {
   margin-left: 15px;
   padding-left: 0px;
-  border-left: 2px solid #444; /* subtle divider */
+  border-left: 2px solid #93c5fd; /* Soft sky-blue border */
 }
 
 .sidebar a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #2563eb; /* Bright blue links */
   font-weight: 500;
-  transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #e63946;
+  text-decoration: underline;
+  color: #1e40af; /* Darker blue on hover */
 }
 
-/* Content area */
 .content {
   width: 80%;
   padding: 15px;
   box-sizing: border-box;
-  background: #1e1e1e; /* Dark bg */
-  color: #f5f5f5;
+  background: #ffffff;
+  color: #1e293b; /* Neutral slate for readability */
 }
 
 iframe {
@@ -96,34 +74,17 @@ iframe {
   border: none;
 }
 
-/* Fan Site main styles */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #2a2a2a;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.custom-link {
+    text-decoration: none;
+    color: #ffffff; /* White links for header */
 }
 
-main h2 {
-  color: #e63946;
-  margin-bottom: 15px;
+.custom-link:visited {
+    color: #ffffff;
 }
 
-main img {
-  display: block;
-  margin: 10px auto;
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-/* Footer */
-footer {
-  background: #1a1a1a;
-  color: #bbb;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-  border-top: 2px solid #e63946;
+.custom-link:hover,
+.custom-link:active {
+    color: #60a5fa; /* Sky blue highlight */
+    text-decoration: none;
 }
