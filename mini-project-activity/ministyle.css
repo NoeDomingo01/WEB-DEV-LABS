@@ -138,3 +138,16 @@ form button {
 form button:hover {
   background-color: #2563eb;
 }
+
+main ul {
+  list-style-position: inside;
+  padding-left: 20px; 
+  margin-left: 15px; 
+}
+
+main li {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+
