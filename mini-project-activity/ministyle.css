@@ -1,29 +1,41 @@
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fbff; 
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbff;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Header */
 header {
-  background: linear-gradient(90deg, #1e3a8a, #2563eb); 
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
   color: #ffffff;
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
   margin-bottom: 5px;
   font-size: 2em;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
+/* Navbar */
 header nav ul {
   list-style: none;
   display: flex;
@@ -39,13 +51,30 @@ header nav ul li a {
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 4px;
-  transition: background 0.3s;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
 }
 
 header nav ul li a:hover {
-  background: rgba(255,255,255,0.2);
+  color: #ffde59;
 }
 
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Main content */
 main {
   max-width: 1000px;
   margin: 30px auto;
@@ -53,6 +82,7 @@ main {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-in-out;
 }
 
 main h2 {
@@ -79,17 +109,25 @@ main img {
   border-radius: 8px;
   max-width: 100%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+main img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer */
 footer {
   text-align: center;
-  background: #1e3a8a;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
   color: #ffffff;
   padding: 15px;
   margin-top: 40px;
   font-size: 0.9em;
 }
 
+/* Form styles */
 form {
   max-width: 600px;
   margin: 20px auto;
@@ -132,22 +170,34 @@ form button {
   font-size: 1em;
   cursor: pointer;
   border-radius: 4px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 form button:hover {
   background-color: #2563eb;
+  transform: scale(1.05);
 }
 
-main ul {
-  list-style-position: inside;
-  padding-left: 20px; 
-  margin-left: 15px; 
+/* List styles */
+.content ul {
+  padding-left: 25px;
+  margin-left: 10px;
 }
 
-main li {
+.content li {
   margin: 8px 0;
   line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 
