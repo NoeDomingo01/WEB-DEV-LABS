@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Two-Column Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* Default: stacked on small screens */
+      align-items: center;
+      gap: 20px;
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .image-section {
+      flex: 1;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* On wider screens: arrange side by side */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .text-section, .image-section {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexible Two-Column Layout</h1>
+
+  <div class="container">
+    <div class="text-section">
+      <h2>Responsive Web Design</h2>
+      <p>
+        The scene captures a breathtaking sunset that spreads its golden hues across a vast green field, transforming the landscape into a masterpiece of light and shadow. The sun, partly veiled by gentle clouds, casts a warm glow that dances over the grass, making each blade shimmer in the fading daylight. The sky itself becomes a canvas of colors, blending shades of orange, yellow, and subtle purples as dusk approaches. In the distance, a graceful line of tall trees stands as natural guardians of the horizon, their silhouettes cutting through the brilliance of the evening sky and adding contrast to the radiant light. The stillness of the moment reflects a timeless beauty, one that draws the viewer into a peaceful embrace of nature’s grandeur.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="https://picsum.photos/600/400" alt="Sample Image">
+    </div>
+  </div>
+</body>
+</html>

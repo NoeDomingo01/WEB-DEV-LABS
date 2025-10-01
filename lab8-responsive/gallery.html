@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr; /* default for mobile (1 column) */
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Tablet: 2 columns */
+    @media (min-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop: 3+ columns */
+    @media (min-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Large desktop: 4 columns */
+    @media (min-width: 1200px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Grid Gallery</h1>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/400/300?random=1" alt="Sample 1">
+    <img src="https://picsum.photos/400/300?random=2" alt="Sample 2">
+    <img src="https://picsum.photos/400/300?random=3" alt="Sample 3">
+    <img src="https://picsum.photos/400/300?random=4" alt="Sample 4">
+    <img src="https://picsum.photos/400/300?random=5" alt="Sample 5">
+    <img src="https://picsum.photos/400/300?random=6" alt="Sample 6">
+    <img src="https://picsum.photos/400/300?random=7" alt="Sample 7">
+    <img src="https://picsum.photos/400/300?random=8" alt="Sample 8">
+    <img src="https://picsum.photos/400/300?random=9" alt="Sample 9">
+  </div>
+</body>
+</html>
