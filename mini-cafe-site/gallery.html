@@ -3,154 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Nowi & Goldy Café</title>
-  
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
+  <title>Nowii & Goldy Café Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Poppins', Arial, sans-serif;
-      background: #f4f1ee;
-      color: #333;
-      padding: 20px;
+      background-color: #f8f9fa;
     }
-
     h1 {
-      font-size: 2.5rem;
-      color: #5c3d2e;
+      text-align: center;
+      margin: 30px 0;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #3b2f2f;
     }
-
-    p {
-      color: #555;
+    .gallery-img {
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-
-    /* Gallery Header */
-    .gallery-header {
-      text-align: center;
-      margin-bottom: 50px;
+    .gallery-img:hover {
+      transform: scale(1.05);
     }
-
-    .gallery-header p {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #7a6f66;
-    }
-
-    /* Gallery Grid */
-    .gallery-container {
-      display: grid;
-      grid-template-columns: 1fr; /* Mobile */
-      gap: 25px;
-    }
-
-    /* Card Style */
-    .gallery-item {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .gallery-item h5 {
-      margin: 15px 0;
+    .card-title {
+      color: #8B0000;
       font-weight: 600;
-      color: #3e2723;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #7a6f66;
-      font-size: 0.9rem;
-    }
-
-    footer hr {
-      width: 60%;
-      margin: 20px auto;
-      border-top: 2px solid #d3bfa8;
-    }
-
-    /* Responsive Layouts */
-    @media (min-width: 600px) {
-      .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 900px) {
-      .gallery-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Gallery Section -->
-  <div class="container">
-    <div class="gallery-header">
-      <h1>Nowi & Goldy Café Gallery</h1>
-      <p>Explore our cozy café moments — from rich brews to sweet smiles shared over every cup.</p>
+  <div class="container my-5">
+    <h1>Nowii & Goldy Café Gallery</h1>
+
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/espresso.jpg" class="card-img-top gallery-img" alt="Espresso">
+          <div class="card-body text-center">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Strong and bold shot of coffee.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/cappuccino.jpg" class="card-img-top gallery-img" alt="Cappuccino">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">Espresso with steamed milk and foam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/latte.jpg" class="card-img-top gallery-img" alt="Latte">
+          <div class="card-body text-center">
+            <h5 class="card-title">Latte</h5>
+            <p class="card-text">Rich espresso blended with creamy milk.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/greentea.jpg" class="card-img-top gallery-img" alt="Green Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Green Tea</h5>
+            <p class="card-text">Refreshing and calming aroma.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/milktea.jpg" class="card-img-top gallery-img" alt="Milk Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Milk Tea</h5>
+            <p class="card-text">Smooth black tea with milk and sweetness.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="images/cheesecake.jpg" class="card-img-top gallery-img" alt="Cheesecake">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cheesecake</h5>
+            <p class="card-text">Creamy dessert topped with glaze.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="gallery-container">
-      <div class="gallery-item">
-        <img src="images/coffee1.jpg" alt="Espresso Delight">
-        <div class="text-center p-3">
-          <h5>Espresso Delight</h5>
-        </div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="images/coffee2.jpg" alt="Sweet Latte">
-        <div class="text-center p-3">
-          <h5>Sweet Latte</h5>
-        </div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="images/coffee3.jpg" alt="Croissant & Brew">
-        <div class="text-center p-3">
-          <h5>Croissant & Brew</h5>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-      <hr>
-      <p>&copy; 2025 Nowi & Goldy Café — All Rights Reserved</p>
-    </footer>
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
