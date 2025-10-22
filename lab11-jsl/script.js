@@ -9,3 +9,7 @@ let sum = num1 + num2;
 
 // Output results to console
 console.log("The sum of " + num1 + " and " + num2 + " is " + sum);
+
+document.getElementById("clickBtn").addEventListener("click", function() {
+  alert("Thanks for clicking!");
+});

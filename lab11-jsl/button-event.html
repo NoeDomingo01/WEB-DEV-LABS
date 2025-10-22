@@ -3,31 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Event with Variables</title>
-  <script>
-    // Variable declaration using let
-    let name = "Noe";
-    console.log("Hello, " + name + "!");
-
-    // Math operation using two variables
-    let num1 = 10;
-    let num2 = 5;
-    let sum = num1 + num2;
-
-    // Output results to console
-    console.log("The sum of " + num1 + " and " + num2 + " is " + sum);
-
-    // Function for button click
-    function showMessage() {
-      alert("Hello, " + name + "! The sum of " + num1 + " and " + num2 + " is " + sum + ". Thanks for clicking!");
-    }
-  </script>
+  <title>Button Click Message</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Activity 4: Button Click Message</h1>
-  <p>Click the button below to see a message!</p>
-
-  <!-- Button with inline event -->
-  <button onclick="showMessage()">Click Me</button>
+  <h2>Hi! My name is Noe 👤</h2>
+  <button id="clickBtn">Click Me</button>
 </body>
 </html>

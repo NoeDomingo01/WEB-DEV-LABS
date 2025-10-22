@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <h2>Enter Your Name</h2>
+
+    <input type="text" id="nameField" placeholder="Enter your name">
+    <button id="submitBtn">Submit</button>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            let name = document.getElementById("nameField").value;
+            if (name.trim() !== "") {
+                alert("Thank you, " + name + "!");
+            } else {
+                alert("Please enter your name first.");
+            }
+        });
+    </script>
+</body>
+</html>
