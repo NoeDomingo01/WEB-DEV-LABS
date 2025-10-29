@@ -1,0 +1,101 @@
+/* 🧹 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌍 Body Theme */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* 🌟 Typography */
+h1, h2, h3 {
+  color: #5c3d2e; /* brown esports theme */
+  font-weight: 700;
+}
+
+/* ✅ Section Padding */
+section, .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* 🟫 Navbar Custom Accent */
+.navbar {
+  background-color: #5c3d2e !important;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #f3d7c4 !important;
+  transform: scale(1.08);
+}
+
+/* 🖼️ Hero Styling */
+header img {
+  border: 3px solid #5c3d2e;
+}
+
+/* ✨ Image Style */
+img {
+  border-radius: 10px;
+}
+
+/* ✅ Card Hover Effect for future use */
+.card {
+  border: none;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 📌 Justified Text */
+.text-justify {
+  text-align: justify;
+}
+
+/* 🔥 Fade-In Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎬 Smooth Hover Buttons */
+button, .btn {
+  transition: 0.2s ease-in-out;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* 📱 Extra Responsiveness Fix */
+img, iframe {
+  max-width: 100%;
+}
+
+/* 🔥 Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
