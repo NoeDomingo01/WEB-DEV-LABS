@@ -1,90 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Esports Hub | About</title>
 
-  <title>About | Esports Fan Site</title>
-  <meta name="description" content="Learn what esports is and how it became a global competitive gaming industry.">
+<!-- ✅ Favicon -->
+<link rel="icon" type="image/jpg" href="noed.jpg">
 
-  <!-- ✅ Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- ✅ Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- ✅ Your Custom CSS -->
-  <link rel="stylesheet" href="ministyle.css">
+<!-- ✅ Custom Theme -->
+<link rel="stylesheet" href="ministyle.css">
 </head>
 
 <body>
 
-  <!-- ✅ Header -->
-  <header class="py-4 text-center bg-primary text-white shadow">
-    <h1 class="fw-bold">Esports Fan Site</h1>
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background:#5c3d2e;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Esports Hub</a>
 
-    <!-- ✅ Navigation (Bootstrap Nav) -->
-    <nav>
-      <ul class="nav justify-content-center gap-2 mt-3">
-        <li class="nav-item"><a class="btn btn-light" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="about.html">About</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="history.html">History</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="dota2.html">Dota 2</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="lol.html">League of Legends</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="valorant.html">Valorant</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="csgo.html">CS:GO</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="mlbb.html">MLBB</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="others.html">Others</a></li>
-        <li class="nav-item"><a class="btn btn-light" href="credits.html">Credits</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+        <li class="nav-item"><a href="dota2.html" class="nav-link">DOTA 2</a></li>
+        <li class="nav-item"><a href="lol.html" class="nav-link">League of Legends</a></li>
+        <li class="nav-item"><a href="valorant.html" class="nav-link">Valorant</a></li>
+        <li class="nav-item"><a href="csgo.html" class="nav-link">CS:GO</a></li>
+        <li class="nav-item"><a href="mlbb.html" class="nav-link">MLBB</a></li>
+        <li class="nav-item"><a href="others.html" class="nav-link">Others</a></li>
+        <li class="nav-item"><a href="credits.html" class="nav-link">Credits</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <!-- ✅ Main Content -->
-  <main class="container py-5">
-    <div class="rounded p-4 bg-white shadow">
-
-      <h2 class="text-primary fw-bold mb-3">About Esports</h2>
-
-      <p class="text-justify">
-        Esports (electronic sports) refers to professional competitive video gaming.
-        What started as small arcade competitions has grown into a global industry with
-        millions of fans, sponsorships, and professional leagues.
-      </p>
-
-      <p class="text-justify">
-        Professional players train daily, mastering mechanics, strategies, and teamwork.
-        Esports organizations operate like traditional sports teams, with coaches, analysts,
-        and international tournaments filling entire arenas.
-      </p>
-
-      <h3 class="text-primary fw-semibold mt-4">Popular Esports Genres</h3>
-      <ul>
-        <li><strong>MOBA</strong> – Dota 2, League of Legends</li>
-        <li><strong>FPS</strong> – CS:GO, Valorant</li>
-        <li><strong>Mobile Esports</strong> – Mobile Legends, Wild Rift</li>
-        <li><strong>Battle Royale</strong> – PUBG, Fortnite</li>
-      </ul>
-
-      <!-- ✅ Picture -->
-      <div class="text-center my-4">
-        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Esports-Arena-with-League-of-Legends-Worlds.jpg"
-             alt="Esports competitive arena"
-             class="img-fluid rounded shadow">
-      </div>
-
-      <p class="text-justify">
-        Today, esports is one of the fastest-growing industries, blending gaming, entertainment,
-        streaming, and technology — with events watched by millions globally.
-      </p>
-
     </div>
-  </main>
+  </div>
+</nav>
 
-  <!-- ✅ Footer -->
-  <footer class="text-center text-white py-3 bg-dark mt-4">
-    &copy; 2025 Esports Fan Site | Noe Domingo | BSIE-ICT
-  </footer>
+<!-- ✅ ABOUT HERO -->
+<header class="py-5 text-center bg-light">
+  <img src="images/noed.jpg" class="rounded-circle shadow mb-3" width="130" alt="Site Owner">
+  <h2 class="fw-bold" style="color:#5c3d2e;">About Esports Hub</h2>
+  <p class="lead">Discover the passion, story, and purpose behind this esports-focused fan space 🎮🔥</p>
+</header>
 
-  <!-- ✅ Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ✅ MAIN CONTENT -->
+<div class="container my-5">
+
+  <h3 class="fw-bold mb-3" style="color:#5c3d2e;">Who We Are</h3>
+  <p>
+    Esports Hub is a student-developed project dedicated to showcasing the exciting world of esports.
+    From global tournaments to legendary teams, this website aims to inform and inspire fellow gamers,
+    students, and fans about competitive gaming culture.
+  </p>
+
+  <h3 class="fw-bold mt-4 mb-3" style="color:#5c3d2e;">Mission</h3>
+  <p>
+    To create a friendly and informative online space where gamers can explore esports games,
+    understand their history, and appreciate the growth of esports worldwide.
+  </p>
+
+  <h3 class="fw-bold mt-4 mb-3" style="color:#5c3d2e;">Vision</h3>
+  <p>
+    To promote esports as a modern sport that builds teamwork, strategy,
+    discipline, creativity, and passion — not just entertainment, but a future career path.
+  </p>
+
+  <h3 class="fw-bold mt-4 mb-3" style="color:#5c3d2e;">Developer</h3>
+  <p>
+    This website is proudly created by <strong>Noe Domingo</strong>, an esports and gaming enthusiast.
+    Built as a school web project, it reflects dedication to both education and the gaming community.
+  </p>
+
+  <!-- ✅ ESports Image -->
+  <div class="text-center mt-4">
+    <img src="images/esports2.jpg" class="img-fluid rounded shadow" alt="Esports Arena">
+  </div>
+
+</div>
+
+<!-- ✅ FOOTER -->
+<footer class="text-center py-3" style="background:#5c3d2e; color:white;">
+  &copy; 2025 Esports Hub | Developed by Noe Domingo
+</footer>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
