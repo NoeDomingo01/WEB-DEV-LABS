@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Array Storage</title>
+</head>
+<body>
+
+    <h2>Contact Form (Array Storage)</h2>
+
+    <form id="contactForm" onsubmit="saveData(event)">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea id="message" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Stored Contacts:</h3>
+    <ul id="list"></ul>
+
+    <script>
+        const contacts = [];
+
+        function saveData(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            contacts.push({ name, message }); // store in array
+
+            displayList();
+
+            document.getElementById("contactForm").reset();
+        }
+
+        function displayList() {
+            const list = document.getElementById("list");
+            list.innerHTML = "";
+
+            contacts.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${index + 1}. ${item.name} - ${item.message}`;
+                list.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>

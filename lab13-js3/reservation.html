@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+</head>
+<body>
+
+    <h2>Reservation Form</h2>
+
+    <form id="reserveForm" onsubmit="submitReservation(event)">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Date:</label><br>
+        <input type="date" id="date" required><br><br>
+
+        <label>Time:</label><br>
+        <input type="time" id="time" required><br><br>
+
+        <label>Guests:</label><br>
+        <input type="number" id="guests" min="1" required><br><br>
+
+        <button type="submit">Reserve</button>
+    </form>
+
+    <h3>Reservation Details:</h3>
+    <div id="output"></div>
+
+    <script>
+        function submitReservation(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const guests = document.getElementById("guests").value;
+
+            const output = document.getElementById("output");
+
+            output.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Time:</strong> ${time}</p>
+                <p><strong>Guests:</strong> ${guests}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>

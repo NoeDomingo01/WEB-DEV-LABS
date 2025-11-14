@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        #result {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Form</h2>
+
+    <form id="myForm" onsubmit="handleSubmit(event)">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Submitted Data:</h3>
+    <div id="result"></div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // stop form from refreshing
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            document.getElementById("result").innerHTML =
+                `<p><strong>Name:</strong> ${name}</p>
+                 <p><strong>Email:</strong> ${email}</p>`;
+        }
+    </script>
+
+</body>
+</html>
