@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Nowi & Goldy Café</title>
+    <link rel="stylesheet" href="home-style.css">
+    <style>
+        .feedback-container {
+            max-width: 500px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #3e2723;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+        }
+        #success {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #error {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #feedback-list {
+            margin-top: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        #feedback-list li {
+            background: #fcefe8;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 6px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nowi & Goldy Café</h1>
+    <p>Your thoughts matter! Leave us your feedback below.</p>
+    <hr>
+
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+
+        <form onsubmit="submitFeedback(event)">
+            <label>Name:</label>
+            <input type="text" id="name">
+
+            <label>Email:</label>
+            <input type="email" id="email">
+
+            <label>Message:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p id="error"></p>
+        <p id="success"></p>
+    </div>
+
+    <div id="feedback-list">
+        <h2>Previous Feedback</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nowi & Goldy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const feedbacks = [];
+
+        function submitFeedback(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            const error = document.getElementById("error");
+            const success = document.getElementById("success");
+
+            error.textContent = "";
+            success.textContent = "";
+
+            // Validation
+            if (name === "") {
+                error.textContent = "Name cannot be empty.";
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                error.textContent = "Invalid email format.";
+                return;
+            }
+
+            if (message.length <= 5) {
+                error.textContent = "Message must be longer than 5 characters.";
+                return;
+            }
+
+            // Save feedback
+            feedbacks.push({ name, email, message });
+
+            success.textContent = "Feedback submitted successfully!";
+
+            displayFeedback();
+
+            // Reset form
+            document.querySelector("form").reset();
+        }
+
+        function displayFeedback() {
+            let list = document.getElementById("list");
+            list.innerHTML = "";
+
+            feedbacks.forEach(item => {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${item.name}</strong> (${item.email}):<br>${item.message}`;
+                list.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>
